@@ -2,7 +2,7 @@
 ## AI-Powered Cotton & Groundnut Market Linkage Platform
 
 > **Hackathon-ready MVP** built with IBM Bob, IBM Granite LLM, and IBM Cloud  
-> Connects cotton and groundnut farmers in Gujarat with buyers through AI-powered market intelligence
+> AI-powered market linkage platform connecting Cotton & Groundnut farmers in Gujarat with buyers — built with IBM Granite LLM, React, and Node.js. Features price forecasting, buyer-farmer matching, quality grading, and multilingual (EN/GU) support.
 
 ---
 
