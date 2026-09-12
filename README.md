@@ -426,7 +426,7 @@ To switch to live IBM Granite:
 
 ## License
 
-MIT License – Built for IBM Hackathon 2024
+MIT License – Built for IBM Hackathon 2026
 
 ---
 
