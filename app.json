@@ -1,7 +1,7 @@
 {
   "name": "CGM Gujarat Platform",
   "description": "AI-Powered Cotton & Groundnut Market Linkage Platform",
-  "domain": "Economic Development",
+  "domain": " Agriculture / Economic Development",
   "technology": ["IBM Bob", "IBM Granite LLM", "IBM Cloud"],
   "github": "https://github.com/MeetTailor-Data/cgm-gujarat-platform",
   "team": ["Meet Tailor","Ved Patel","Pratham Modi","Nirav panwala","Drashtant Mevada"]
