@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  cgm-backend:
+    build: ./backend
+    container_name: cgm-backend
+    ports:
+      - "5000:5000"
+    environment:
+      - NODE_ENV=production
+      - PORT=5000
+      - JWT_SECRET=${JWT_SECRET:-cgm_platform_secret_2024}
+      - IBM_WATSONX_API_KEY=${IBM_WATSONX_API_KEY:-}
+      - IBM_WATSONX_PROJECT_ID=${IBM_WATSONX_PROJECT_ID:-}
+      - IBM_WATSONX_URL=${IBM_WATSONX_URL:-https://us-south.ml.cloud.ibm.com}
+      - GRANITE_MODEL_ID=${GRANITE_MODEL_ID:-ibm/granite-13b-chat-v2}
+    volumes:
+      - cgm_data:/app/data
+      - cgm_uploads:/app/uploads
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:5000/api/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+  cgm-frontend:
+    build: ./frontend
+    container_name: cgm-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      cgm-backend:
+        condition: service_healthy
+    environment:
+      - VITE_API_URL=/api
+
+volumes:
+  cgm_data:
+  cgm_uploads:
