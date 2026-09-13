@@ -426,7 +426,9 @@ To switch to live IBM Granite:
 
 ## License
 
-MIT License – Built for IBM Hackathon 2026
+This project is licensed under the **MIT License** — see the [LICENSE](./LICENSE) file for full details.
+
+Built for IBM Hackathon 2026 · Copyright (c) 2026 CGM Gujarat Platform Contributors
 
 ---
 
