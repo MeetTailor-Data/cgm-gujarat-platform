@@ -64,7 +64,7 @@ Write-Host "  Backend is up" -ForegroundColor Green
 
 # 6. Start frontend
 Write-Host "Starting frontend : http://localhost:3000" -ForegroundColor Green
-Start-Process -FilePath "npm" `
+Start-Process -FilePath "npm.cmd" `
     -ArgumentList "run", "dev" `
     -WorkingDirectory $frontend `
     -RedirectStandardOutput (Join-Path $root "frontend.log") `
